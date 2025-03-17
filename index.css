@@ -1,0 +1,9 @@
+#ramen-detail {
+    display: flex;              /* Enable Flexbox layout */
+    flex-direction: row;        /* Align children in a row */
+    gap: 20px;                  /* Adds space between each <p> element */
+}
+
+#ramen-detail p {
+    margin: 0;                  /* Remove default margin from <p> */
+}
