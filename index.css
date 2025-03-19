@@ -1,9 +1,138 @@
-#ramen-detail {
-    display: flex;              /* Enable Flexbox layout */
-    flex-direction: row;        /* Align children in a row */
-    gap: 20px;                  /* Adds space between each <p> element */
+/* General Styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    align-self: flex-start;
+    align: center;
 }
 
-#ramen-detail p {
-    margin: 0;                  /* Remove default margin from <p> */
+header {
+    background-color: #ff6347;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+main {
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #ff6347;
+    font-weight: bold;
+}
+
+/* Ramen Menu */
+#ramen-menu {
+    margin-bottom: 20px;
+}
+
+#ramen-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#ramen-list li {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    flex: 1 1 calc(33.333% - 20px);
+    text-align: center;
+}
+
+#ramen-list li:hover {
+    background-color: #ffe4e1;
+    transform: scale(1.05);
+}
+
+/* Ramen Details */
+#ramen-detail-section {
+    margin-bottom: 20px;
+}
+
+#ramen-detail {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#ramen-image {
+    max-width: 15%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+/* Available Ramen Images */
+#ramen-images-section {
+    margin-bottom: 20px;
+}
+
+#ramen-images img {
+    max-width: 15%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+#ramen-images img:hover {
+    transform: scale(1.05);
+}
+
+/* Add New Ramen */
+#add-ramen-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#add-ramen-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#add-ramen-form input, #add-ramen-form textarea, #add-ramen-form button {
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+#add-ramen-form button {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+#add-ramen-form button:hover {
+    background-color: #ff4500;
 }
